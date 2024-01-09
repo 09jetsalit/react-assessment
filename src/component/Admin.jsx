@@ -1,53 +1,47 @@
 import { useEffect, useState } from "react";
-import { mockEmployees } from "./mockEmployees";
+import { Adddata } from "./adddata";
 
 const Admin = () => {
   const [users, setUsers] = useState([]);
 
   const fetchData = () => {
-    setUsers(mockEmployees);
+    setUsers(Adddata);
   };
 
   useEffect(fetchData, []);
 
   return (
     <div className="container-fluid ">
+      <div className="pl=4">Create User here</div>
       <div className="row ">
-        {/* <div>input</div> */}
-        {/* <div className="col-12 mx-auto pt-5 pb-5 text-center">
-          <h1 className="display-1">THIS IS admin page</h1>
-        </div> */}
+    
         <div className="col-3 mx-auto mb-4">
-          <label>Name</label>
+          <label></label>
           <input
             type="text"
             className="form-control"
             id="name"
             placeholder="name"
-            // value={username}
-            // onChange={onchangeUsername}
           />
         </div>
         <div className="col-3 mx-auto mb-4">
-          <label>Last name</label>
+          <label></label>
           <input
             type="text"
             className="form-control"
             id="lastname"
             placeholder="lastname"
-            // value={username}
-            // onChange={onchangeUsername}
+         
           />
         </div>
         <div className="col-3 mx-auto mb-4">
-          <label>Position</label>
+          <label></label>
           <input
             type="text"
             className="form-control"
             id="position"
             placeholder="position"
-            // value={username}
-            // onChange={onchangeUsername}
+            
           />
         </div>
         <div>
@@ -69,11 +63,7 @@ const Admin = () => {
                   <td>Delete</td>
                 </tr>
               ))}
-              {/* <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr> */}
+           
             </tbody>
           </table>
         </div>

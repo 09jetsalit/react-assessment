@@ -89,7 +89,6 @@ function DisplayInfo(props) {
       "Please select an option."</p>);
   }
 
-  // return <div>{display}</div>;
 }
 
 export default Home;
